@@ -1,16 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+﻿using System.Windows;
 
 namespace Applications.Desktop.AdminPanel
 {
@@ -35,11 +23,11 @@ namespace Applications.Desktop.AdminPanel
             {
                 MessageBox.Show("Нет", startButton.Content.ToString());
             }
-            
 
             //Ctrl + K, Ctrl + D - выравнивание кода по стилю
             //Ctrl + R, Ctrl + G - удаление и упорядочивание using'ов
 
+            //Test comment
         }
     }
 }
