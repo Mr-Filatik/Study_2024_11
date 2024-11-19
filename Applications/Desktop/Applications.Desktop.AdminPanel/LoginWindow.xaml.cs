@@ -33,22 +33,28 @@ namespace Applications.Desktop.AdminPanel
             Grid.SetRow(buttonTwo, 3);
         }
 
-        //private void ButtonClick(object sender, RoutedEventArgs e)
-        //{
-        //    var result = MessageBox.Show("Привет, мир!", "Приветсвенное окно", MessageBoxButton.YesNo, MessageBoxImage.Error);
-        //    if (result == MessageBoxResult.Yes)
-        //    {
-        //        MessageBox.Show("Да", startButton.Content.ToString());
-        //    }
-        //    else
-        //    {
-        //        MessageBox.Show("Нет", startButton.Content.ToString());
-        //    }
+        private void ButtonClick(object sender, RoutedEventArgs e)
+        {
+            var window = new ElementsWindow();
+            window.Title = "ПРИВЕТ ЮЗЕР";
+            window.Owner = this;
+            window.Show();
+            //Close(); // Закрытие текущего окна
 
-        //    //Ctrl + K, Ctrl + D - выравнивание кода по стилю
-        //    //Ctrl + R, Ctrl + G - удаление и упорядочивание using'ов
+            //var result = MessageBox.Show("Привет, мир!", "Приветсвенное окно", MessageBoxButton.YesNo, MessageBoxImage.Error);
+            //if (result == MessageBoxResult.Yes)
+            //{
+            //    MessageBox.Show("Да", startButton.Content.ToString());
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Нет", startButton.Content.ToString());
+            //}
 
-        //    //Test comment
-        //}
+            //Ctrl + K, Ctrl + D - выравнивание кода по стилю
+            //Ctrl + R, Ctrl + G - удаление и упорядочивание using'ов
+
+            //Test comment
+        }
     }
 }
