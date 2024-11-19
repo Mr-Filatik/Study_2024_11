@@ -5,12 +5,37 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Applications.Desktop.AdminPanel"
         mc:Ignorable="d"
-        Title="LoginWindow" Height="450" Width="800">
-    <Grid>
-        <Button x:Name="startButton"
-                Content="Button Start"
-                Width="600"
-                Height="300"
-                Click="ButtonClick"/>
-    </Grid>
+        Title="LoginWindow" Height="600" Width="800">
+    <StackPanel>
+        <StackPanel Width="500" Height="150" Margin="0, 0, 0, 20" Background="Black">
+            <TextBox Margin="0, 0, 0, 10">ВВЕДИТЕ ЛОГИН</TextBox>
+            <TextBox Margin="0, 0, 0, 10">ВВЕДИТЕ ПАРОЛЬ</TextBox>
+            <Button Margin="0, 0, 0, 10">ВОЙТИ</Button>
+            <StackPanel Orientation="Horizontal" FlowDirection="LeftToRight">
+                <Button Width="250">ЗАБЫЛИ ПАРОЛЬ?</Button>
+                <Button Width="250">РЕГИСТРАЦИЯ</Button>
+            </StackPanel>
+        </StackPanel>
+        <Grid x:Name="mainGrid" Width="500" Height="150" Margin="0, 0, 0, 20" Background="Aqua">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <TextBox Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Margin="0, 0, 0, 10">ВВЕДИТЕ ЛОГИН</TextBox>
+            <TextBox Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Margin="0, 0, 0, 10">ВВЕДИТЕ ПАРОЛЬ</TextBox>
+            <Button Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" Margin="0, 0, 0, 10">ВОЙТИ</Button>
+        </Grid>
+        <Canvas Width="500" Height="150" Background="Lavender">
+            <Button Background="AliceBlue" Content="Top 20 Left 40" Canvas.Top="20" Canvas.Left="40" />
+            <Button Background="LightSkyBlue" Content="Top 20 Right 20" Canvas.Top="20" Canvas.Right="20"/>
+            <Button Background="Aquamarine" Content="Bottom 30 Left 20" Canvas.Bottom="60" Canvas.Left="20"/>
+            <Button Background="LightCyan" Content="Bottom 20 Right 40" Canvas.Bottom="20" Canvas.Right="40"/>
+        </Canvas>
+    </StackPanel>
 </Window>

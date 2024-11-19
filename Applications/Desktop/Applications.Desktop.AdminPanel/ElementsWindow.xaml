@@ -1,0 +1,21 @@
+﻿<Window x:Class="Applications.Desktop.AdminPanel.ElementsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Applications.Desktop.AdminPanel"
+        mc:Ignorable="d"
+        Title="ElementsWindow" Height="450" Width="800">
+    <StackPanel>
+        <Button Height="30" Click="ButtonClick">КНОПКА</Button>
+        <ToggleButton Height="30" IsChecked="False" Click="ToggleButtonClick">ПЕРЕКЛЮЧАТЕЛЬ</ToggleButton>
+        <RadioButton GroupName="MainGroup" Content="Var 1" Checked="RadioButtonCheck"/>
+        <RadioButton GroupName="MainGroup" Content="Var 2" Checked="RadioButtonCheck"/>
+        <RadioButton GroupName="MainGroup" Content="Var 3" Checked="RadioButtonCheck"/>
+        <Button Height="30" Click="ButtonClick" Content="BUTTON">
+            <Button.ToolTip>
+                <ToolTip>НЕ НАЖИМАЙ ЭТУ КНОПКУ</ToolTip>
+            </Button.ToolTip>
+        </Button>
+    </StackPanel>
+</Window>
