@@ -32,4 +32,4 @@
 * [DI пакеты для .NET](https://stackoverflow.com/questions/21288/which-net-dependency-injection-frameworks-are-worth-looking-into)
 * [Книга про внедрение зависимостей](https://www.smarly.net/dependency-injection-in-net)
 * [Логирование с помощью пакета Serilog](https://github.com/serilog/serilog/wiki/Getting-Started)
-
+* [Что такое JSON](https://habr.com/ru/articles/554274/)
