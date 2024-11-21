@@ -1,5 +1,6 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media;
 
 namespace Applications.Desktop.AdminPanel
 {
@@ -8,6 +9,8 @@ namespace Applications.Desktop.AdminPanel
     /// </summary>
     public partial class LoginWindow : Window
     {
+        Login loginModel = new Login();
+
         public LoginWindow()
         {
             InitializeComponent();
@@ -31,14 +34,31 @@ namespace Applications.Desktop.AdminPanel
             mainGrid.Children.Add(buttonTwo);
             Grid.SetColumn(buttonTwo, 1);
             Grid.SetRow(buttonTwo, 3);
+
+            this.DataContext = loginModel;
         }
 
         private void ButtonClick(object sender, RoutedEventArgs e)
         {
-            var window = new ElementsWindow();
-            window.Title = "ПРИВЕТ ЮЗЕР";
-            window.Owner = this;
-            window.Show();
+            if (string.IsNullOrEmpty(loginBox.Text))
+            {
+                loginBox.BorderBrush = new SolidColorBrush(Color.FromRgb(255, 0, 0));
+                MessageBox.Show("Введите логин!", "Предупреждение", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+            //if (string.IsNullOrEmpty(passwordBox.Text))
+            //{
+            //    MessageBox.Show("Введите пароль!", "Предупреждение", MessageBoxButton.OK, MessageBoxImage.Warning);
+            //    return;
+            //}
+
+            //main logic
+            MessageBox.Show($"Привет, {loginBox.Text}!", "Приветствие", MessageBoxButton.OK, MessageBoxImage.Information);
+
+            //var window = new ElementsWindow();
+            //window.Title = "ПРИВЕТ ЮЗЕР";
+            //window.Owner = this;
+            //window.Show();
             //Close(); // Закрытие текущего окна
 
             //var result = MessageBox.Show("Привет, мир!", "Приветсвенное окно", MessageBoxButton.YesNo, MessageBoxImage.Error);
