@@ -28,7 +28,7 @@
 * [Как работать с GitHub Desktop](https://selectel.ru/blog/git-github-review/)
 * [MVVM в WPF](https://skillbox.ru/media/code/mvvm_proektirovanie_prilozheniy_dlya_windows/)
 * [MVVM в WPF. Полное понимание](https://habr.com/ru/articles/338518/)
-* [Пример приложения WPF с MVVM](https://github.com/Mr-Filatik/MariaTest)
+* [Пример приложения WPF с MVVM](https://github.com/Mr-Filatik/MariaTest) [Про конвертеры](https://metanit.com/sharp/wpf/11.3.php)
 * [DI пакеты для .NET](https://stackoverflow.com/questions/21288/which-net-dependency-injection-frameworks-are-worth-looking-into)
 * [Книга про внедрение зависимостей](https://www.smarly.net/dependency-injection-in-net)
 * [Логирование с помощью пакета Serilog](https://github.com/serilog/serilog/wiki/Getting-Started)
