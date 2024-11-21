@@ -20,6 +20,7 @@
 # ССЫЛКИ
 
 * [GitHub](https://github.com/)
+* [Как вести фаил README.md](https://docs.github.com/ru/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
 * [Скачать GitHub Desktop](https://desktop.github.com/download/)
 * [Руководство по WPF](https://metanit.com/sharp/wpf/)
 * [Что такое Git](https://education.yandex.ru/journal/chto-takoe-github)
