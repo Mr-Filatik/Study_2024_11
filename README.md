@@ -26,7 +26,7 @@
 * [Что такое Git](https://education.yandex.ru/journal/chto-takoe-github)
 * [Работа с ветками в Git](https://habr.com/ru/companies/yandex_praktikum/articles/728302/)
 * [Как работать с GitHub Desktop](https://selectel.ru/blog/git-github-review/)
-* [MVVM в WPF](https://skillbox.ru/media/code/mvvm_proektirovanie_prilozheniy_dlya_windows/)
+* [MVVM в WPF](https://skillbox.ru/media/code/mvvm_proektirovanie_prilozheniy_dlya_windows/) [MessageBox в MVVM](https://awkwardcoder.blogspot.com/2012/03/showing-message-box-from-viewmodel-in.html)
 * [MVVM в WPF. Полное понимание](https://habr.com/ru/articles/338518/)
 * [Пример приложения WPF с MVVM](https://github.com/Mr-Filatik/MariaTest) [Про конвертеры](https://metanit.com/sharp/wpf/11.3.php)
 * [DI пакеты для .NET](https://stackoverflow.com/questions/21288/which-net-dependency-injection-frameworks-are-worth-looking-into)
