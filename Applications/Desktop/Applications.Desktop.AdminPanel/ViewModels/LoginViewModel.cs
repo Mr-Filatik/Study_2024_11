@@ -1,4 +1,5 @@
 ﻿using Applications.Desktop.AdminPanel.Commands;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,8 +11,15 @@ using System.Windows;
 
 namespace Applications.Desktop.AdminPanel.ViewModels;
 
-public class LoginViewModel : ViewModel, INotifyPropertyChanged
+public class LoginViewModel : ILoginViewModel
 {
+    private readonly ILogger<LoginViewModel> _logger;
+
+    public LoginViewModel(ILogger<LoginViewModel> logger)
+    {
+        _logger = logger;
+    }
+
     #region Properties
 
     private string _loginField;
@@ -55,11 +63,19 @@ public class LoginViewModel : ViewModel, INotifyPropertyChanged
             {
                 if (!string.IsNullOrEmpty(LoginField) && !string.IsNullOrEmpty(PasswordField))
                 {
+                    _logger.LogInformation("Wokr is pressed");
                     MessageBoxShow?.Invoke("Work", "Test");
                 }
             }));
         }
     }
+
+    #endregion
+
+    #region Implement ILoginViewModel
+
+    public Func<string, string, bool>? MessageBoxShow { get; set; }
+    public Action? CloseWindow { get; set; }
 
     #endregion
 
