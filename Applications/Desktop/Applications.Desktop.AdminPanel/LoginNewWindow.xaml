@@ -1,0 +1,31 @@
+﻿<Window x:Class="Applications.Desktop.AdminPanel.LoginNewWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Applications.Desktop.AdminPanel"
+        mc:Ignorable="d"
+        Title="LoginNewWindow" Height="450" Width="800">
+    <Grid>
+        <Grid x:Name="mainGrid" Width="500" Height="150" Margin="0, 0, 0, 20" Background="Aqua">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Column="0" Grid.Row="0" Margin="0, 0, 0, 10">Login:</TextBlock>
+            <TextBox x:Name="loginBox" Grid.Column="1" Grid.Row="0" Margin="0, 0, 0, 10" Text="{Binding LoginField}"></TextBox>
+            <TextBlock Grid.Column="0" Grid.Row="1" Margin="0, 0, 0, 10">Password:</TextBlock>
+            <TextBox x:Name="passwordBox" Grid.Column="1" Grid.Row="1" Margin="0, 0, 0, 10" Text="{Binding PasswordField}"></TextBox>
+            <Button Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" Margin="0, 0, 0, 10" Command="{Binding LoginCommand}">ВОЙТИ</Button>
+            <Button Grid.Column="0" Grid.Row="3" Margin="0, 0, 0, 10">ЗАБЫЛИ ПАРОЛЬ?</Button>
+            <Button Grid.Column="1" Grid.Row="3" Margin="0, 0, 0, 10">РЕГИСТРАЦИЯ</Button>
+
+        </Grid>
+    </Grid>
+</Window>

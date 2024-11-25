@@ -4,7 +4,7 @@ using System.ComponentModel;
 
 namespace Applications.Desktop.AdminPanel.ViewModels;
 
-public class LoginViewModel : INotifyPropertyChanged, ILoginViewModel
+public class AdminViewModel : INotifyPropertyChanged, IViewModel
 {
     #region Properties
 

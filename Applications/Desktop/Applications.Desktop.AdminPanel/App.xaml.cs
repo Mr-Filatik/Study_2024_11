@@ -10,7 +10,9 @@ namespace Applications.Desktop.AdminPanel
     {
         protected override void OnStartup(StartupEventArgs e)
         {
-            LoginWindow window = new LoginWindow(new LoginViewModel());
+            //LoginNewWindow window = new LoginNewWindow(new LoginViewModel());
+            //LoginWindow window = new LoginWindow(new LoginViewModel());
+            LoginWindow window = new LoginWindow(new LoginNewViewModel());
             window.WindowStartupLocation = WindowStartupLocation.CenterScreen;
             window.Show();
         }

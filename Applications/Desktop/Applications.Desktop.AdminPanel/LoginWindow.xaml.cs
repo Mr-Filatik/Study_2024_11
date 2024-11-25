@@ -10,7 +10,7 @@ namespace Applications.Desktop.AdminPanel
     /// </summary>
     public partial class LoginWindow : Window
     {
-        public LoginWindow(IViewModel viewModel)
+        public LoginWindow(ILoginViewModel viewModel)
         {
             InitializeComponent();
 
