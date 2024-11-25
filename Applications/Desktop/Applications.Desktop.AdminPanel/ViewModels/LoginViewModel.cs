@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Applications.Desktop.AdminPanel.Commands;
+using Applications.Desktop.AdminPanel.ViewModels.Abstract;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Applications.Desktop.AdminPanel.ViewModels;
 
-public class LoginViewModel : INotifyPropertyChanged
+public class LoginViewModel : INotifyPropertyChanged, IViewModel
 {
     #region Properties
 
@@ -41,6 +38,36 @@ public class LoginViewModel : INotifyPropertyChanged
 
     #endregion
 
+    #region Commands
+
+    private ButtonCommand _loginCommand;
+    public ButtonCommand LoginCommand
+    {
+        get
+        {
+            if (_loginCommand == null)
+            {
+                _loginCommand = new ButtonCommand(LoginMethod);
+            }
+            return _loginCommand;
+        }
+    }
+
+    private void LoginMethod(object? obj)
+    {
+        if (!string.IsNullOrEmpty(LoginField) && !string.IsNullOrEmpty(PasswordField))
+        {
+            MessageBoxYesNo?.Invoke("Work", "Test");
+
+            //MessageBox.Show("Work"); //лучше отсюда не вызывать уведомления
+
+            //LoginField = "LoginField";
+            //PasswordField = "PasswordField";
+        }
+    }
+
+    #endregion
+
     #region Implement INotifyPropertyChanged
 
     public event PropertyChangedEventHandler? PropertyChanged;
@@ -49,6 +76,12 @@ public class LoginViewModel : INotifyPropertyChanged
     {
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
     }
+
+    #endregion
+
+    #region Implement IViewModel
+
+    public Func<string, string, bool> MessageBoxYesNo { get; set; }
 
     #endregion
 }
