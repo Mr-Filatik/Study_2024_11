@@ -30,16 +30,11 @@
             <TextBlock Grid.Column="0" Grid.Row="0" Margin="0, 0, 0, 10">Login:</TextBlock>
             <TextBox x:Name="loginBox" Grid.Column="1" Grid.Row="0" Margin="0, 0, 0, 10"></TextBox>
             <TextBlock Grid.Column="0" Grid.Row="1" Margin="0, 0, 0, 10">Password:</TextBlock>
-            <TextBox x:Name="passwordBox" Grid.Column="1" Grid.Row="1" Margin="0, 0, 0, 10">
-                <TextBox.Text>
-                    <Binding Path="PasswordField">
-                        <Binding.ValidationRules>
-                            <DataErrorValidationRule></DataErrorValidationRule>
-                        </Binding.ValidationRules>
-                    </Binding>
-                </TextBox.Text>
-            </TextBox>
+            <TextBox x:Name="passwordBox" Grid.Column="1" Grid.Row="1" Margin="0, 0, 0, 10"></TextBox>
             <Button Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" Margin="0, 0, 0, 10" Click="ButtonClick">ВОЙТИ</Button>
+            <Button Grid.Column="0" Grid.Row="3" Margin="0, 0, 0, 10">ЗАБЫЛИ ПАРОЛЬ?</Button>
+            <Button Grid.Column="1" Grid.Row="3" Margin="0, 0, 0, 10">РЕГИСТРАЦИЯ</Button>
+
         </Grid>
         <Canvas Width="500" Height="150" Background="Lavender">
             <Button Background="AliceBlue" Content="Top 20 Left 40" Canvas.Top="20" Canvas.Left="40" />
