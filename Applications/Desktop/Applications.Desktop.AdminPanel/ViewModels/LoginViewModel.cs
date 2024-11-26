@@ -1,11 +1,19 @@
 ﻿using Applications.Desktop.AdminPanel.Commands;
 using Applications.Desktop.AdminPanel.ViewModels.Abstract;
+using Microsoft.Extensions.Logging;
 using System.ComponentModel;
 
 namespace Applications.Desktop.AdminPanel.ViewModels;
 
 public class LoginViewModel : INotifyPropertyChanged, ILoginViewModel
 {
+    private readonly ILogger<LoginViewModel> _logger;
+
+    public LoginViewModel(ILogger<LoginViewModel> logger)
+    {
+        _logger = logger;
+    }
+
     #region Properties
 
     private string _loginField;
@@ -55,14 +63,24 @@ public class LoginViewModel : INotifyPropertyChanged, ILoginViewModel
 
     private void LoginMethod(object? obj)
     {
-        if (!string.IsNullOrEmpty(LoginField) && !string.IsNullOrEmpty(PasswordField))
+        try
         {
-            MessageBoxYesNo?.Invoke("Work", "Test");
+            _logger.LogInformation($"Login button click. Login: {LoginField}. Password {PasswordField}.");
+            if (!string.IsNullOrEmpty(LoginField) && !string.IsNullOrEmpty(PasswordField))
+            {
+                _logger.LogInformation($"Login for user {LoginField} is OK.");
+                MessageBoxYesNo?.Invoke("Work", "Test");
 
-            //MessageBox.Show("Work"); //лучше отсюда не вызывать уведомления
+                throw new Exception("Database ERROR.");
+                //MessageBox.Show("Work"); //лучше отсюда не вызывать уведомления
 
-            //LoginField = "LoginField";
-            //PasswordField = "PasswordField";
+                //LoginField = "LoginField";
+                //PasswordField = "PasswordField";
+            }
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, $"Error in login.");
         }
     }
 
