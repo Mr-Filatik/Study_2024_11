@@ -2,6 +2,7 @@
 using Applications.Desktop.AdminPanel.ViewModels;
 using Applications.Desktop.AdminPanel.ViewModels.Abstract;
 using Microsoft.Extensions.DependencyInjection;
+using Serilog;
 using System.Windows;
 
 namespace Applications.Desktop.AdminPanel
@@ -15,7 +16,14 @@ namespace Applications.Desktop.AdminPanel
 
         protected override void OnStartup(StartupEventArgs e)
         {
+            Log.Logger = new LoggerConfiguration()
+                .WriteTo.File("logs/log-.txt", rollingInterval: RollingInterval.Hour, outputTemplate: "{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} [{Level:u3}] {Message:lj}{NewLine}{Exception}")
+                .CreateLogger();
+
             var services = new ServiceCollection();
+
+            services.AddSerilog(Log.Logger);
+            services.AddLogging(opt => opt.AddSerilog(Log.Logger));
 
             services.RegisterViews();
             services.RegisterViewModels();
