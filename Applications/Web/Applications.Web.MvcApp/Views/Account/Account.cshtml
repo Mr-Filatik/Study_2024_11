@@ -1,0 +1,20 @@
+﻿@model AccountViewModel
+@{
+    ViewData["Title"] = "Account Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Account (@Model.Name)</h1>
+    @if (Model.FriendNames.Any())
+    {
+        <p>Friends:</p>
+        @foreach (var item in Model.FriendNames)
+        {
+            <p>@item.</p>
+        }
+    }
+    else
+    {
+        <p>Not friends.</p>
+    }
+</div>

@@ -1,0 +1,15 @@
+﻿@model LoginViewModel
+@{
+    ViewData["Title"] = "Login Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Login</h1>
+    <form asp-controller="Account" asp-action="Login" method="post">
+        <input asp-for="@Model.Login" />
+        <br />
+        <input asp-for="@Model.Password" />
+        <br />
+        <input type="submit" />
+    </form>
+</div>
