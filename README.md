@@ -4,7 +4,7 @@
 Планы приложения:
 - [x] Проект: Админское приложение
 - [ ] Проект: Доступ к базе данных
-- [ ] Проект: Сервер на базе API
+- [x] Проект: Сервер на базе API
 - [ ] Проект: Клиентское приложение MVC
 - [ ] Проект: Клиентское приложение Blazor
 
@@ -15,7 +15,10 @@
 3. WPF и работа с данными. [Видео](https://disk.yandex.ru/d/fPDfOoC7AjEHjA). Задание: сделать окно, на котором можно взаимодействовать с наборами данных, создавать, редактировать, удалять записи.
 4. WPF и паттерн MVVM. [Видео](https://disk.yandex.ru/d/-0LkLMARsq-mJQ). [Презентация](https://disk.yandex.ru/d/-0LkLMARsq-mJQ). Задание: перевести WPF приложение на паттерн MVVM.
 5. WPF и внедрение зависимостей и логирование. [Видео](https://disk.yandex.ru/d/534Ly7Rblg99Aw). [Презентация](https://disk.yandex.ru/d/534Ly7Rblg99Aw).
-6. MVC веб-приложение, структура, основы. [Видео](). [Презентация]().
+6. MVC веб-приложение, структура, основы. Web-API и Swagger. [Видео](https://disk.yandex.ru/d/olyBJmoTH9jI5Q). Задание: добавить API приложение в решение и настроить Swagger.
+7. ORM. Базы данных без баз данных. [Видео]().
+7. Авторизация и аутентификация. [Видео]().
+7. Blazor веб-приложение. [Видео]().
 
 # ССЫЛКИ
 
@@ -33,3 +36,7 @@
 * [Книга про внедрение зависимостей](https://www.smarly.net/dependency-injection-in-net)
 * [Логирование с помощью пакета Serilog](https://github.com/serilog/serilog/wiki/Getting-Started)
 * [Что такое JSON](https://habr.com/ru/articles/554274/)
+* [Руководство по ASP.NET Core MVC](https://metanit.com/sharp/mvc5/)
+* [Руководство по WEB-API](https://metanit.com/sharp/aspnet5/23.1.php)
+* [Основы Swagger](https://habr.com/ru/companies/simbirsoft/articles/707108/)
+* [Настройка примеров запросов в Swagger](https://medium.com/@niteshsinghal85/multiple-request-response-examples-for-swagger-ui-in-asp-net-core-864c0bdc6619)
