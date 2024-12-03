@@ -3,7 +3,7 @@
 Проект соц. сети.
 Планы приложения:
 - [x] Проект: Админское приложение
-- [ ] Проект: Доступ к базе данных
+- [x] Проект: Доступ к базе данных
 - [x] Проект: Сервер на базе API
 - [ ] Проект: Клиентское приложение MVC
 - [ ] Проект: Клиентское приложение Blazor
@@ -16,7 +16,8 @@
 4. WPF и паттерн MVVM. [Видео](https://disk.yandex.ru/d/-0LkLMARsq-mJQ). [Презентация](https://disk.yandex.ru/d/-0LkLMARsq-mJQ). Задание: перевести WPF приложение на паттерн MVVM.
 5. WPF и внедрение зависимостей и логирование. [Видео](https://disk.yandex.ru/d/534Ly7Rblg99Aw). [Презентация](https://disk.yandex.ru/d/534Ly7Rblg99Aw).
 6. MVC веб-приложение, структура, основы. Web-API и Swagger. [Видео](https://disk.yandex.ru/d/olyBJmoTH9jI5Q). Задание: добавить API приложение в решение и настроить Swagger.
-7. ORM. Базы данных без баз данных. [Видео]().
+7. Entity Framework. ORM. Базы данных без баз данных. [Видео](https://disk.yandex.ru/d/RKr-MfZ_X-AIZQ). [Презентация](https://disk.yandex.ru/d/RKr-MfZ_X-AIZQ). Задание добавить в решение отдельный проект (типа Console) для взаимодействия с базой данных.
+8. Миграции и отношения между сущностями через ORM. [Видео]().
 7. Авторизация и аутентификация. [Видео]().
 7. Blazor веб-приложение. [Видео]().
 
@@ -40,3 +41,6 @@
 * [Руководство по WEB-API](https://metanit.com/sharp/aspnet5/23.1.php)
 * [Основы Swagger](https://habr.com/ru/companies/simbirsoft/articles/707108/)
 * [Настройка примеров запросов в Swagger](https://medium.com/@niteshsinghal85/multiple-request-response-examples-for-swagger-ui-in-asp-net-core-864c0bdc6619)
+* [Что такое ORM](https://blog.skillfactory.ru/glossary/orm/)
+* [Руководство по Entity Framework](https://metanit.com/sharp/efcore/)
+* [Руководство по ADO.NET](https://metanit.com/sharp/adonetcore/)
