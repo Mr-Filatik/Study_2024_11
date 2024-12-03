@@ -16,8 +16,9 @@
 4. WPF и паттерн MVVM. [Видео](https://disk.yandex.ru/d/-0LkLMARsq-mJQ). [Презентация](https://disk.yandex.ru/d/-0LkLMARsq-mJQ). Задание: перевести WPF приложение на паттерн MVVM.
 5. WPF и внедрение зависимостей и логирование. [Видео](https://disk.yandex.ru/d/534Ly7Rblg99Aw). [Презентация](https://disk.yandex.ru/d/534Ly7Rblg99Aw).
 6. MVC веб-приложение, структура, основы. Web-API и Swagger. [Видео](https://disk.yandex.ru/d/olyBJmoTH9jI5Q). Задание: добавить API приложение в решение и настроить Swagger.
-7. Entity Framework. ORM. Базы данных без баз данных. [Видео](https://disk.yandex.ru/d/RKr-MfZ_X-AIZQ). [Презентация](https://disk.yandex.ru/d/RKr-MfZ_X-AIZQ). Задание добавить в решение отдельный проект (типа Console) для взаимодействия с базой данных.
-8. Миграции и отношения между сущностями через ORM. [Видео]().
+7. Entity Framework. ORM. Базы данных без баз данных. [Видео](https://disk.yandex.ru/d/RKr-MfZ_X-AIZQ). [Презентация](https://disk.yandex.ru/d/RKr-MfZ_X-AIZQ). Задание: добавить в решение отдельный проект (типа Console) для взаимодействия с базой данных.
+8. Миграции и отношения между сущностями через ORM. [Видео](https://disk.yandex.ru/d/Q2WBMRFqOFl0hA). [Недописанное руководство](https://disk.yandex.ru/d/Q2WBMRFqOFl0hA). Задание: добавить миграции для работы с БД.
+9. Внедрение проекта с БД в веб-сервер. [Видео]().
 7. Авторизация и аутентификация. [Видео]().
 7. Blazor веб-приложение. [Видео]().
 
@@ -44,3 +45,5 @@
 * [Что такое ORM](https://blog.skillfactory.ru/glossary/orm/)
 * [Руководство по Entity Framework](https://metanit.com/sharp/efcore/)
 * [Руководство по ADO.NET](https://metanit.com/sharp/adonetcore/)
+* [Миграции](https://metanit.com/sharp/entityframeworkcore/2.15.php)
+* [Описание организации связей в EF](https://www.learnentityframeworkcore.com/relationships)
