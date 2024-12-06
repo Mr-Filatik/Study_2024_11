@@ -18,7 +18,7 @@
 6. MVC веб-приложение, структура, основы. Web-API и Swagger. [Видео](https://disk.yandex.ru/d/olyBJmoTH9jI5Q). Задание: добавить API приложение в решение и настроить Swagger.
 7. Entity Framework. ORM. Базы данных без баз данных. [Видео](https://disk.yandex.ru/d/RKr-MfZ_X-AIZQ). [Презентация](https://disk.yandex.ru/d/RKr-MfZ_X-AIZQ). Задание: добавить в решение отдельный проект (типа Console) для взаимодействия с базой данных.
 8. Миграции и отношения между сущностями через ORM. [Видео](https://disk.yandex.ru/d/Q2WBMRFqOFl0hA). [Недописанное руководство](https://disk.yandex.ru/d/Q2WBMRFqOFl0hA). Задание: добавить миграции для работы с БД.
-9. Внедрение проекта с БД в веб-сервер. [Видео]().
+9. Создание структуры проекта с БД. Внедрение проекта в веб-сервер. [Видео](https://disk.yandex.ru/d/Cg7GWDtgD6hjQA). Задание: создать репозитории в проекте и работать через них в других приложениях.
 7. Авторизация и аутентификация. [Видео]().
 7. Blazor веб-приложение. [Видео]().
 
@@ -47,3 +47,5 @@
 * [Руководство по ADO.NET](https://metanit.com/sharp/adonetcore/)
 * [Миграции](https://metanit.com/sharp/entityframeworkcore/2.15.php)
 * [Описание организации связей в EF](https://www.learnentityframeworkcore.com/relationships)
+* [Описание паттерна Repository](https://ru.stackoverflow.com/questions/1037422/%D0%9F%D0%B0%D1%82%D1%82%D0%B5%D1%80%D0%BD-repository-%D0%B8-%D1%81%D0%BC%D0%B5%D0%BD%D0%B0-orm)
+* [Postman: первые шаги](https://habr.com/ru/companies/vk/articles/750096/)
