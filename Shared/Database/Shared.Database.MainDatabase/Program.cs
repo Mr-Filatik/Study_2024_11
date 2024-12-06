@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Shared.Database.MainDatabase.Repositories;
 using Study_2024_11.Shared.Entities;
 
 namespace Shared.Database.MainDatabase
@@ -11,67 +12,31 @@ namespace Shared.Database.MainDatabase
 
             var dbContext = new MainDbContext();
 
-            //dbContext.Messages.Add(new Message()
+            var repo = new MessageRepository(dbContext);
+
+            var message = repo.Get(1);
+            if (message != null)
+            {
+                Console.WriteLine(message.Body);
+            }
+
+            //repo.GetRangeByIds([1, 2, 3], 10);
+            //var b = repo.Update(new Message()
             //{
-            //    Body = "cs",
-            //    Title = "Message",
-            //    AuthorId = 1
+            //    AuthorId = 1,
+            //    Body = "hello",
+            //    Title = "hello",
+            //    UniqId = 1,
             //});
-            //dbContext.SaveChanges();
-
-            var mes = dbContext.Messages.Include(x => x.Producer).FirstOrDefault();
-            Console.WriteLine(mes.Producer.Email);
-
-            ////dbContext.Users.Add(new User()
-            ////{
-            ////    FirstName = "Test3",
-            ////    SecondName = "Test3",
-            ////    Email = "Test3",
-            ////    PasswordHash = "Test3",
-            ////    Age = 30,
-            ////    Gender = false,
-            ////});
-            ////dbContext.SaveChanges();
-            //Console.WriteLine($"====================================");
-
-            ////var user = dbContext.Users.AsNoTracking().FirstOrDefault(u => u.Id == 3);
-            //var user = dbContext.Users.FirstOrDefault(u => u.Id == 1);
-            //if (user != null)
+            //if (b)
             //{
-            //    Console.WriteLine($"User found. Id: {user.Id}, Name: {user.FirstName}.");
+            //    Console.WriteLine("OK");
             //}
             //else
             //{
-            //    Console.WriteLine($"User not found.");
+            //    Console.WriteLine("DONT OK");
             //}
 
-            //Console.WriteLine($"====================================");
-
-            //var users = dbContext.Users.Where(u => u.Age < 25);//.Skip(20).Take(10);
-
-            ////dbContext.Users.Add(new User()
-            ////{
-            ////    FirstName = "Test4",
-            ////    SecondName = "Test4",
-            ////    Email = "Test4",
-            ////    PasswordHash = "Test4",
-            ////    Age = 23,
-            ////    Gender = false,
-            ////});
-            ////dbContext.SaveChanges();
-
-            //foreach (var u in users)
-            //{
-            //    Console.WriteLine($"User found. Id: {u.Id}, Name: {u.FirstName}.");
-            //}
-
-            ////dbContext.Users.Remove(new User() { Id = 4 });
-            //if (user != null)
-            //{
-            //    user.Email = "ho-ho-ho";
-            //    dbContext.Users.Update(user);
-            //    dbContext.SaveChanges();
-            //}
 
             //Console.WriteLine($"====================================");
 

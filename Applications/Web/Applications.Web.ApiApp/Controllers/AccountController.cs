@@ -1,6 +1,7 @@
 ﻿using Applications.Web.ApiApp.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Shared.Database.MainDatabase.Repositories;
 using Swashbuckle.AspNetCore.Filters;
 
 namespace Applications.Web.ApiApp.Controllers
@@ -9,6 +10,13 @@ namespace Applications.Web.ApiApp.Controllers
     [Route("api/account")]
     public class AccountController : ControllerBase
     {
+        private readonly UserRepository _userRepository;
+
+        public AccountController(UserRepository userRepository)
+        {
+            _userRepository = userRepository;
+        }
+
         [HttpPost("login")]
         [ProducesResponseType<LoginResponse>(StatusCodes.Status200OK)]
         [ProducesResponseType<ErrorResponse>(StatusCodes.Status400BadRequest)]
@@ -22,7 +30,7 @@ namespace Applications.Web.ApiApp.Controllers
                 {
                     return Ok(new LoginResponse()
                     {
-                        Token = $"hello {request.Login}"
+                        Token = $"hello {_userRepository.Get(1)?.Email}"
                     });
                 }
 
