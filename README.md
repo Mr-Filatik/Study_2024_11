@@ -19,6 +19,8 @@
 7. Entity Framework. ORM. Базы данных без баз данных. [Видео](https://disk.yandex.ru/d/RKr-MfZ_X-AIZQ). [Презентация](https://disk.yandex.ru/d/RKr-MfZ_X-AIZQ). Задание: добавить в решение отдельный проект (типа Console) для взаимодействия с базой данных.
 8. Миграции и отношения между сущностями через ORM. [Видео](https://disk.yandex.ru/d/Q2WBMRFqOFl0hA). [Недописанное руководство](https://disk.yandex.ru/d/Q2WBMRFqOFl0hA). Задание: добавить миграции для работы с БД.
 9. Создание структуры проекта с БД. Внедрение проекта в веб-сервер. [Видео](https://disk.yandex.ru/d/Cg7GWDtgD6hjQA). Задание: создать репозитории в проекте и работать через них в других приложениях.
+10. Пропущенные темы: интерфейсы, обобщённые типы, коллекции и методы расширений. [Видео](https://disk.yandex.ru/d/bKFluVELYMWLYg). [Презентации](https://disk.yandex.ru/d/bKFluVELYMWLYg). Ссылки на почитать: [интерфейсы](https://metanit.com/sharp/tutorial/3.9.php), [коллекции](https://metanit.com/sharp/tutorial/4.5.php), [методы расширений](https://metanit.com/sharp/tutorial/3.18.php), [обобщённые типы](https://metanit.com/sharp/tutorial/3.12.php) и [StringBuilder](https://metanit.com/sharp/tutorial/7.3.php).
+11. Пропущенные темы: 
 7. Авторизация и аутентификация. [Видео]().
 7. Blazor веб-приложение. [Видео]().
 
