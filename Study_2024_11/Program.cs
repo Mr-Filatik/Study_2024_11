@@ -6,64 +6,61 @@ public class Program
 {
     public static void Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
-
-        var str = "csjbcsjs";
-        Console.WriteLine(str.RemoveModTwo());
-
-        var storage = new MemoryStorage();
-
-        //storage.SetValue("SERVER_ADDRESS", "localhost:8080");
-
-        //SellerPanel(storage);
-
-        //UserPanel(storage);
-
-        //AdminPanel(storage);
-
-        //var repository = new EntityRepository<User>();
-        //repository.Create(new User());
-        //repository.Create(new Admin());
+        Console.WriteLine("Start Main!");
+        Method1();
+        Console.WriteLine("End Main!");
     }
 
-    public static void UserPanel(IStorage storage)
+    public static void Method1()
     {
-        // преобразования (плохой вариант) может выдать ошибку при null
-        //var stor1 = (MemoryStorage)storage;
-        // преобразования (хороший вариант) вернёт null если не сможет преобразовать
-        var stor = storage as MemoryStorage;
-        if (stor != null)
+        Console.WriteLine("Start Method1!");
+        try
         {
-            stor.SetString();
+            Method2();
         }
-        Console.WriteLine(storage.GetValue("PRODUCT_ID"));
+        catch (DatabaseException e)
+        {
+            Console.WriteLine($"Error: {e.Message}!");
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine($"Uncnown exception!!!");
+        }
+        Console.WriteLine("End Method1!");
     }
 
-    public static void AdminPanel(IStorage storage)
+    public static void Method2()
     {
-        Console.WriteLine(storage.GetValue("SERVER_ADDRESS"));
+        Console.WriteLine("Start Method2!");
+        Method3();
+        Console.WriteLine("End Method2!");
     }
 
-    public static void SellerPanel(IStorage storage)
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <exception cref="DatabaseException"></exception>
+    /// <exception cref="ArgumentException"></exception>
+    public static void Method3()
     {
-        storage.SetValue("PRODUCT_ID", "152278767");
-
-        Console.WriteLine(storage.GetValue("PRODUCT_ID"));
+        Console.WriteLine("Start Method3!");
+        int a = 3;
+        if (a == 0)
+        {
+            throw new DatabaseException("Error connect to database");
+        }
+        if (a == 1)
+        {
+            throw new ArgumentException("Uncnown exception!");
+        }
+        Console.WriteLine("End Method3!");
     }
 }
 
-public static class StringExtension
+public class DatabaseException : Exception
 {
-    public static string RemoveModTwo(this string str)
+    public DatabaseException(string message) : base(message)
     {
-        StringBuilder res = new StringBuilder();
-        for (int i = 0; i < str.Length; i++)
-        {
-            if (i % 2 == 0)
-            {
-                res.Append(str[i]);
-            }
-        }
-        return res.ToString();
+        
     }
 }
