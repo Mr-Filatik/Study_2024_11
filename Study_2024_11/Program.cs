@@ -4,63 +4,77 @@ namespace Study_2024_11;
 
 public class Program
 {
+    public static List<int> ints = new List<int>() { 1, 3, 6, 2, 8, 3, 2 };
+
     public static void Main(string[] args)
     {
-        Console.WriteLine("Start Main!");
-        Method1();
-        Console.WriteLine("End Main!");
+        //Console.WriteLine("Start Main!");
+        //Method1(a => a < 4);
+        //Console.WriteLine("Method Main!");
+        //Method1(a => a >= 4);
+        //Console.WriteLine("End Main!");
+
+        //Method2(() =>
+        //{
+        //    Console.ForegroundColor = ConsoleColor.Green;
+        //    Console.WriteLine("Error");
+        //});
+
+        var car = new Car(MethodForCar);
+        car.Move(10);
+        car.Move(110);
+        car.Move(120);
+        car.Move(10);
     }
 
-    public static void Method1()
+    public static void Method1(Predicate<int> func)
     {
-        Console.WriteLine("Start Method1!");
-        try
+        foreach (var item in ints)
         {
-            Method2();
+            if (func(item))
+            {
+                Console.WriteLine(item);
+            }
         }
-        catch (DatabaseException e)
-        {
-            Console.WriteLine($"Error: {e.Message}!");
-        }
-        catch (Exception e)
-        {
-            Console.WriteLine($"Uncnown exception!!!");
-        }
-        Console.WriteLine("End Method1!");
     }
 
-    public static void Method2()
+    public static void Method2(Action func)
     {
-        Console.WriteLine("Start Method2!");
-        Method3();
-        Console.WriteLine("End Method2!");
+        Console.WriteLine("Start work!");
+        Console.WriteLine("Error");
+        func();
     }
 
-    /// <summary>
-    /// 
-    /// </summary>
-    /// <exception cref="DatabaseException"></exception>
-    /// <exception cref="ArgumentException"></exception>
-    public static void Method3()
+    public static void MethodForCar(string mes)
     {
-        Console.WriteLine("Start Method3!");
-        int a = 3;
-        if (a == 0)
-        {
-            throw new DatabaseException("Error connect to database");
-        }
-        if (a == 1)
-        {
-            throw new ArgumentException("Uncnown exception!");
-        }
-        Console.WriteLine("End Method3!");
+        Console.WriteLine("Отправка данных --------------");
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        Console.WriteLine(mes);
+        Console.ForegroundColor = ConsoleColor.White;
+        Console.WriteLine("Отправка данных --------------");
     }
 }
 
-public class DatabaseException : Exception
+public class Car
 {
-    public DatabaseException(string message) : base(message)
+    private Action<string> _signal;
+
+    public Car(Action<string> signal)
     {
-        
+        _signal = signal;
+    }
+
+    public void Move(int distance)
+    {
+        Console.WriteLine($"Start move {distance}!");
+        if (distance > 100)
+        {
+            _signal.Invoke("Нужна заправка");
+        }
+        Console.WriteLine($"End move {distance}!");
     }
 }
+
+//Action<string, int, bool> - public void Move(string str, int distance, bool aaa)
+//Predicate<string, int, bool> - public bool Move(string str, int distance, bool aaa)
+//Func<int, bool, string> - public string Move(int distance, bool aaa)
