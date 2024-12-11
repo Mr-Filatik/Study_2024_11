@@ -4,66 +4,77 @@ namespace Study_2024_11;
 
 public class Program
 {
+    public static List<int> ints = new List<int>() { 1, 3, 6, 2, 8, 3, 2 };
+
     public static void Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
+        //Console.WriteLine("Start Main!");
+        //Method1(a => a < 4);
+        //Console.WriteLine("Method Main!");
+        //Method1(a => a >= 4);
+        //Console.WriteLine("End Main!");
 
-        var str = "csjbcsjs";
-        Console.WriteLine(str.RemoveModTwo());
+        //Method2(() =>
+        //{
+        //    Console.ForegroundColor = ConsoleColor.Green;
+        //    Console.WriteLine("Error");
+        //});
 
-        var storage = new MemoryStorage();
-
-        //storage.SetValue("SERVER_ADDRESS", "localhost:8080");
-
-        //SellerPanel(storage);
-
-        //UserPanel(storage);
-
-        //AdminPanel(storage);
-
-        //var repository = new EntityRepository<User>();
-        //repository.Create(new User());
-        //repository.Create(new Admin());
+        var car = new Car(MethodForCar);
+        car.Move(10);
+        car.Move(110);
+        car.Move(120);
+        car.Move(10);
     }
 
-    public static void UserPanel(IStorage storage)
+    public static void Method1(Predicate<int> func)
     {
-        // преобразования (плохой вариант) может выдать ошибку при null
-        //var stor1 = (MemoryStorage)storage;
-        // преобразования (хороший вариант) вернёт null если не сможет преобразовать
-        var stor = storage as MemoryStorage;
-        if (stor != null)
+        foreach (var item in ints)
         {
-            stor.SetString();
-        }
-        Console.WriteLine(storage.GetValue("PRODUCT_ID"));
-    }
-
-    public static void AdminPanel(IStorage storage)
-    {
-        Console.WriteLine(storage.GetValue("SERVER_ADDRESS"));
-    }
-
-    public static void SellerPanel(IStorage storage)
-    {
-        storage.SetValue("PRODUCT_ID", "152278767");
-
-        Console.WriteLine(storage.GetValue("PRODUCT_ID"));
-    }
-}
-
-public static class StringExtension
-{
-    public static string RemoveModTwo(this string str)
-    {
-        StringBuilder res = new StringBuilder();
-        for (int i = 0; i < str.Length; i++)
-        {
-            if (i % 2 == 0)
+            if (func(item))
             {
-                res.Append(str[i]);
+                Console.WriteLine(item);
             }
         }
-        return res.ToString();
+    }
+
+    public static void Method2(Action func)
+    {
+        Console.WriteLine("Start work!");
+        Console.WriteLine("Error");
+        func();
+    }
+
+    public static void MethodForCar(string mes)
+    {
+        Console.WriteLine("Отправка данных --------------");
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        Console.WriteLine(mes);
+        Console.ForegroundColor = ConsoleColor.White;
+        Console.WriteLine("Отправка данных --------------");
     }
 }
+
+public class Car
+{
+    private Action<string> _signal;
+
+    public Car(Action<string> signal)
+    {
+        _signal = signal;
+    }
+
+    public void Move(int distance)
+    {
+        Console.WriteLine($"Start move {distance}!");
+        if (distance > 100)
+        {
+            _signal.Invoke("Нужна заправка");
+        }
+        Console.WriteLine($"End move {distance}!");
+    }
+}
+
+//Action<string, int, bool> - public void Move(string str, int distance, bool aaa)
+//Predicate<string, int, bool> - public bool Move(string str, int distance, bool aaa)
+//Func<int, bool, string> - public string Move(int distance, bool aaa)
