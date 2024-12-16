@@ -4,77 +4,54 @@ namespace Study_2024_11;
 
 public class Program
 {
-    public static List<int> ints = new List<int>() { 1, 3, 6, 2, 8, 3, 2 };
-
-    public static void Main(string[] args)
+    public static async Task Main(string[] args)
     {
-        //Console.WriteLine("Start Main!");
-        //Method1(a => a < 4);
-        //Console.WriteLine("Method Main!");
-        //Method1(a => a >= 4);
-        //Console.WriteLine("End Main!");
+        //Task - задача
+        //Thread - поток
 
-        //Method2(() =>
-        //{
-        //    Console.ForegroundColor = ConsoleColor.Green;
-        //    Console.WriteLine("Error");
-        //});
+        //Готовка пельменей
+        //1. Приготовить тесто
+        //2. Дать тесту настояться
+        //3. Приготовить фарш
+        //4. Сделать пельмени
 
-        var car = new Car(MethodForCar);
-        car.Move(10);
-        car.Move(110);
-        car.Move(120);
-        car.Move(10);
+        var ts = new CancellationTokenSource(TimeSpan.FromMinutes(1));
+        var token = ts.Token;
+
+        var ar = Method1();
+        Console.WriteLine(ar);
+        var b = Method2Async(ar); //=====
+
+        var cr = Method3();
+        Console.WriteLine(cr);
+
+        var br = await b; //=====
+        Console.WriteLine(br);
+        var dr = Method4(br, cr);
+        Console.WriteLine(dr);
     }
 
-    public static void Method1(Predicate<int> func)
+    public static string Method1()
     {
-        foreach (var item in ints)
-        {
-            if (func(item))
-            {
-                Console.WriteLine(item);
-            }
-        }
+        Thread.Sleep(2000);
+        return $"неготовое тесто";
     }
 
-    public static void Method2(Action func)
+    public static async Task<string> Method2Async(string str)
     {
-        Console.WriteLine("Start work!");
-        Console.WriteLine("Error");
-        func();
+        await Task.Delay(1000);
+        return $"тесто из {str}";
     }
 
-    public static void MethodForCar(string mes)
+    public static string Method3()
     {
-        Console.WriteLine("Отправка данных --------------");
-        Console.ForegroundColor = ConsoleColor.Yellow;
-        Console.WriteLine(mes);
-        Console.ForegroundColor = ConsoleColor.White;
-        Console.WriteLine("Отправка данных --------------");
-    }
-}
-
-public class Car
-{
-    private Action<string> _signal;
-
-    public Car(Action<string> signal)
-    {
-        _signal = signal;
+        Thread.Sleep(2000);
+        return $"фарш";
     }
 
-    public void Move(int distance)
+    public static string Method4(string str, string str2)
     {
-        Console.WriteLine($"Start move {distance}!");
-        if (distance > 100)
-        {
-            _signal.Invoke("Нужна заправка");
-        }
-        Console.WriteLine($"End move {distance}!");
+        Thread.Sleep(2000);
+        return $"пельмени = {str} + {str2}";
     }
 }
-
-//Action<string, int, bool> - public void Move(string str, int distance, bool aaa)
-//Predicate<string, int, bool> - public bool Move(string str, int distance, bool aaa)
-//Func<int, bool, string> - public string Move(int distance, bool aaa)
