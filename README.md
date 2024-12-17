@@ -22,8 +22,15 @@
 10. Пропущенные темы: интерфейсы, обобщённые типы, коллекции и методы расширений. [Видео](https://disk.yandex.ru/d/bKFluVELYMWLYg). [Презентации](https://disk.yandex.ru/d/bKFluVELYMWLYg). Ссылки на почитать: [интерфейсы](https://metanit.com/sharp/tutorial/3.9.php), [коллекции](https://metanit.com/sharp/tutorial/4.5.php), [методы расширений](https://metanit.com/sharp/tutorial/3.18.php), [обобщённые типы](https://metanit.com/sharp/tutorial/3.12.php) и [StringBuilder](https://metanit.com/sharp/tutorial/7.3.php).
 11. Пропущенные темы: обработка исключений, делегаты, лямбда-выражения и LINQ. [Видео](https://disk.yandex.ru/d/I0CLvwqvy8Sj6w). [Презентации](https://disk.yandex.ru/d/I0CLvwqvy8Sj6w). Ссылки на почитать: [обработка исключений](https://metanit.com/sharp/tutorial/2.14.php), [делегаты](https://metanit.com/sharp/tutorial/3.13.php), [лямбда-выражения](https://metanit.com/sharp/tutorial/3.16.php) и [LINQ](https://metanit.com/sharp/tutorial/15.1.php).
 12. Пропущенные темы: прпллелизм и асинхронность. [Видео](https://disk.yandex.ru/d/SDZgF6MmN2oEEw). Ссылки на почитать: [разница понятий](https://www.ddplanet.ru/blog/parallelizm-mnogopotochnost-asinhronnost-raznica-i-primery-primeneniya-dotnet-c-sharp/).
-13. Авторизация и аутентификация в API. Хранение паролей. [Видео]().
-14. Blazor веб-приложение. [Видео]().
+13. Авторизация и аутентификация в API. [Видео](https://disk.yandex.ru/d/Zlt7o-7h-7p4Uw). Ссылки на почитать: [добавление Bearer Token в API](https://metanit.com/sharp/aspnet6/13.2.php), [настройка Policy](https://learn.microsoft.com/ru-ru/aspnet/core/security/authorization/limitingidentitybyscheme?view=aspnetcore-9.0), [добавление Bearer Token в Swagger](https://dev.to/eduardstefanescu/aspnet-core-swagger-documentation-with-bearer-authentication-40l6).
+14. Авторизация и аутентификация в ASP.NET. Хранение паролей. [Видео]().
+15. Blazor веб-приложение. [Видео]().
+16. Blazor веб-приложение. [Видео]().
+17. Брокеры сообщений. Kafka.
+18. Кеш приложения. Redis.
+19. Виды баз данных.
+20. ...
+21. ...
 
 # ССЫЛКИ
 
