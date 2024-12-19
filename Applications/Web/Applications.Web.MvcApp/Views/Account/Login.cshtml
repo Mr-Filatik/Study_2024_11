@@ -6,9 +6,12 @@
 <div class="text-center">
     <h1 class="display-4">Login</h1>
     <form asp-controller="Account" asp-action="Login" method="post">
-        <input asp-for="@Model.Login" />
+        <div class="validation" asp-validation-summary="All"></div>
+        <input asp-for="Login" />
+        @* <span asp-validation-for="Login" /> *@
         <br />
-        <input asp-for="@Model.Password" />
+        <input asp-for="Password" />
+        @* <span asp-validation-for="Password" /> *@
         <br />
         <input type="submit" />
     </form>

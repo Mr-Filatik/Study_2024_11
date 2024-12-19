@@ -12,13 +12,11 @@ namespace Shared.Database.MainDatabase
 
             var dbContext = new MainDbContext();
 
-            var repo = new MessageRepository(dbContext);
+            var repo = new UserRepository(dbContext);
 
-            var message = repo.Get(1);
-            if (message != null)
-            {
-                Console.WriteLine(message.Body);
-            }
+            Console.WriteLine(repo.VerifyPassword(2, "gchdvjh"));
+            Console.WriteLine(repo.VerifyPassword(2, "gccskbhjbcsl"));
+            Console.WriteLine(repo.VerifyPassword(2, "password"));
 
             //repo.GetRangeByIds([1, 2, 3], 10);
             //var b = repo.Update(new Message()
