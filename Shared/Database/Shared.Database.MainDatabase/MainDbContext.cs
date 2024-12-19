@@ -35,6 +35,7 @@ public class MainDbContext : DbContext
             Age = 100,
             Email = "admin@mail.com",
             PasswordHash = "password",
+            PasswordSalt = "password",
             Gender = true,
         });
 

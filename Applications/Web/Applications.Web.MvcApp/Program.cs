@@ -1,3 +1,6 @@
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authorization;
+
 namespace Applications.Web.MvcApp
 {
     public class Program
@@ -7,6 +10,20 @@ namespace Applications.Web.MvcApp
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
+            builder.Services
+                .AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+                .AddCookie(options =>
+                {
+                    options.LoginPath = new PathString("/Account/Login");
+                });
+
+            builder.Services.AddAuthorization(options =>
+            {
+                var b = new AuthorizationPolicyBuilder(CookieAuthenticationDefaults.AuthenticationScheme);
+                b = b.RequireAuthenticatedUser(); //RequireRole or RequireClaims
+                options.DefaultPolicy = b.Build();
+            });
+
             builder.Services.AddControllersWithViews();
 
             var app = builder.Build();
@@ -25,6 +42,7 @@ namespace Applications.Web.MvcApp
             app.UseRouting();
 
             app.UseAuthorization();
+            app.UseAuthentication();
 
             app.MapControllerRoute(
                 name: "default",
