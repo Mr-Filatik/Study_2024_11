@@ -23,7 +23,7 @@
 11. Пропущенные темы: обработка исключений, делегаты, лямбда-выражения и LINQ. [Видео](https://disk.yandex.ru/d/I0CLvwqvy8Sj6w). [Презентации](https://disk.yandex.ru/d/I0CLvwqvy8Sj6w). Ссылки на почитать: [обработка исключений](https://metanit.com/sharp/tutorial/2.14.php), [делегаты](https://metanit.com/sharp/tutorial/3.13.php), [лямбда-выражения](https://metanit.com/sharp/tutorial/3.16.php) и [LINQ](https://metanit.com/sharp/tutorial/15.1.php).
 12. Пропущенные темы: прпллелизм и асинхронность. [Видео](https://disk.yandex.ru/d/SDZgF6MmN2oEEw). Ссылки на почитать: [разница понятий](https://www.ddplanet.ru/blog/parallelizm-mnogopotochnost-asinhronnost-raznica-i-primery-primeneniya-dotnet-c-sharp/).
 13. Авторизация и аутентификация в API. [Видео](https://disk.yandex.ru/d/Zlt7o-7h-7p4Uw). Ссылки на почитать: [добавление Bearer Token в API](https://metanit.com/sharp/aspnet6/13.2.php), [настройка Policy](https://learn.microsoft.com/ru-ru/aspnet/core/security/authorization/limitingidentitybyscheme?view=aspnetcore-9.0), [добавление Bearer Token в Swagger](https://dev.to/eduardstefanescu/aspnet-core-swagger-documentation-with-bearer-authentication-40l6).
-14. Авторизация и аутентификация в ASP.NET. Хранение паролей. [Видео]().
+14. Авторизация и аутентификация в ASP.NET. Хранение паролей. [Видео](https://disk.yandex.ru/d/ictm8-1FH_busA). Ссылки на почитать: [что такое Cookie](https://www.kaspersky.ru/resource-center/definitions/cookies), [авторизация с помощью Cookie](https://metanit.com/sharp/aspnet6/13.4.php) и [про пароли и хорошие практики](https://code-maze.com/csharp-hashing-salting-passwords-best-practices/).
 15. Blazor веб-приложение. [Видео]().
 16. Blazor веб-приложение. [Видео]().
 17. Брокеры сообщений. Kafka.
@@ -59,3 +59,4 @@
 * [Описание организации связей в EF](https://www.learnentityframeworkcore.com/relationships)
 * [Описание паттерна Repository](https://ru.stackoverflow.com/questions/1037422/%D0%9F%D0%B0%D1%82%D1%82%D0%B5%D1%80%D0%BD-repository-%D0%B8-%D1%81%D0%BC%D0%B5%D0%BD%D0%B0-orm)
 * [Postman: первые шаги](https://habr.com/ru/companies/vk/articles/750096/)
+* [Как работает хеширование](https://www.youtube.com/watch?v=xV8USnjKGCU)
