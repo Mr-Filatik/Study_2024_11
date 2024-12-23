@@ -1,0 +1,36 @@
+﻿@page "/login"
+@rendermode InteractiveServer
+
+<h3>Login</h3>
+
+<CascadingValue Name="UserId" Value="@UserId">
+        <LoginForm SessionId="@CurrentGuid" OnSubmitButtonCallback="LoginButton"></LoginForm>
+</CascadingValue>
+
+<button @onclick="@(e => GenerateGuid(4))">Generate Guid</button>
+
+<span>@CurrentGuid</span>
+
+<br/>
+
+<button @onclick="@(e => CurrentPage++)">++</button>
+<span>@CurrentPage</span>
+<button @onclick="@(e => CurrentPage--)">--</button>
+
+@code {
+    public string UserId { get; set; } = "12345";
+
+    public int CurrentPage { get; set; }
+
+    public string CurrentGuid { get; set; }
+
+    public void GenerateGuid(int number)
+    {
+        CurrentGuid = Guid.NewGuid().ToString() + " " + number;
+    }
+
+    public void LoginButton(int number)
+    {
+        UserId = number.ToString();
+    }
+}
