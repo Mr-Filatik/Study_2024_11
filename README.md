@@ -5,8 +5,8 @@
 - [x] Проект: Админское приложение
 - [x] Проект: Доступ к базе данных
 - [x] Проект: Сервер на базе API
-- [ ] Проект: Клиентское приложение MVC
-- [ ] Проект: Клиентское приложение Blazor
+- [x] Проект: Клиентское приложение MVC
+- [x] Проект: Клиентское приложение Blazor
 
 # ЗАНЯТИЯ
 
@@ -24,13 +24,13 @@
 12. Пропущенные темы: прпллелизм и асинхронность. [Видео](https://disk.yandex.ru/d/SDZgF6MmN2oEEw). Ссылки на почитать: [разница понятий](https://www.ddplanet.ru/blog/parallelizm-mnogopotochnost-asinhronnost-raznica-i-primery-primeneniya-dotnet-c-sharp/).
 13. Авторизация и аутентификация в API. [Видео](https://disk.yandex.ru/d/Zlt7o-7h-7p4Uw). Ссылки на почитать: [добавление Bearer Token в API](https://metanit.com/sharp/aspnet6/13.2.php), [настройка Policy](https://learn.microsoft.com/ru-ru/aspnet/core/security/authorization/limitingidentitybyscheme?view=aspnetcore-9.0), [добавление Bearer Token в Swagger](https://dev.to/eduardstefanescu/aspnet-core-swagger-documentation-with-bearer-authentication-40l6).
 14. Авторизация и аутентификация в ASP.NET. Хранение паролей. [Видео](https://disk.yandex.ru/d/ictm8-1FH_busA). Ссылки на почитать: [что такое Cookie](https://www.kaspersky.ru/resource-center/definitions/cookies), [авторизация с помощью Cookie](https://metanit.com/sharp/aspnet6/13.4.php) и [про пароли и хорошие практики](https://code-maze.com/csharp-hashing-salting-passwords-best-practices/).
-15. Blazor веб-приложение. [Видео]().
-16. Blazor веб-приложение. [Видео]().
+15. Blazor веб-приложение. Основы и компоненты. [Видео](https://disk.yandex.ru/d/MUByTW9r278I8g). Ссылки на почитать: [что такое Blazor](https://metanit.com/sharp/blazor/1.1.php) и [руководство по Blazor](https://metanit.com/sharp/blazor/2.2.php).
+16. Blazor веб-приложение. Формы и запрос данных с сервера. [Видео]().
 17. Брокеры сообщений. Kafka.
 18. Кеш приложения. Redis.
 19. Виды баз данных.
 20. ...
-21. ...
+21. Хостинг приложений.
 
 # ССЫЛКИ
 
