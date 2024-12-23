@@ -1,0 +1,26 @@
+﻿<h3>LoginForm</h3>
+
+<div class="text-center">
+    <h1 class="display-4">Login @SessionId (@UserId):</h1>
+    <form method="post">
+        <input asp-for="Login"/>
+        <br />
+        <input asp-for="Password" />
+        <br />
+        @* <input type="submit" /> *@
+        
+    </form>
+
+    <button @onclick="@(async() => await OnSubmitButtonCallback.InvokeAsync(543))">Login</button>
+</div>
+
+@code {
+    [Parameter]
+    public string SessionId { get; set; }
+
+    [CascadingParameter(Name = "UserId")]
+    public string UserId { get; set; }
+
+    [Parameter]
+    public EventCallback<int> OnSubmitButtonCallback { get; set; }
+}
