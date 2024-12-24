@@ -1,4 +1,4 @@
-﻿namespace Applications.Web.ApiApp.Models
+﻿namespace Applications.Web.Shared.Models
 {
     public class LoginResponse
     {

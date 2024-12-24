@@ -7,6 +7,7 @@ using Swashbuckle.AspNetCore.Filters;
 using System.IdentityModel.Tokens.Jwt;
 using System.Text;
 using System.Security.Claims;
+using Applications.Web.Shared.Models;
 
 namespace Applications.Web.ApiApp.Controllers
 {

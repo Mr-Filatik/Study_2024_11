@@ -1,5 +1,7 @@
 ﻿@page "/counter"
 @rendermode InteractiveAuto
+@inject HttpClient httpClient
+@using Applications.Web.Shared.Models
 
 <PageTitle>Counter</PageTitle>
 
@@ -9,11 +11,33 @@
 
 <button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
 
+<p role="status">Current count: @message</p>
+
+<button class="btn btn-primary" @onclick="LoginButton">Login</button>
+
 @code {
     private int currentCount = 0;
+    private string message = "";
 
     private void IncrementCount()
     {
         currentCount++;
+    }
+
+    private async Task LoginButton()
+    {
+        var result = await httpClient.PostAsJsonAsync("account/login", new LoginRequest() { Login = "Vlad", Password = "password" });
+        if (result.IsSuccessStatusCode)
+        {
+            //успешный ответ с токеном
+            var token = await result.Content.ReadFromJsonAsync<LoginResponse>();
+            message = token.Token;
+        }
+        else
+        {
+            //неуспешный с сообщением
+            var token = await result.Content.ReadFromJsonAsync<ErrorResponse>();
+            message = token.Message;
+        }
     }
 }

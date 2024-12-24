@@ -9,12 +9,25 @@ namespace Applications.Web.BlazorApp
         {
             var builder = WebApplication.CreateBuilder(args);
 
+            builder.Services.AddCors(options =>
+                {
+                    options.AddDefaultPolicy(builder =>
+                    {
+                        builder.WithOrigins("https://localhost:7086")
+                               .AllowAnyMethod()
+                               .AllowAnyHeader();
+                    });
+                });
             // Add services to the container.
             builder.Services.AddRazorComponents()
                 .AddInteractiveServerComponents()
                 .AddInteractiveWebAssemblyComponents();
 
+            builder.Services.AddHttpClient();
+
             var app = builder.Build();
+
+            app.UseCors();
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
