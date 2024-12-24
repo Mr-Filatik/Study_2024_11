@@ -1,9 +1,44 @@
 ﻿@page "/login"
 @rendermode InteractiveServer
+@inject IHttpClientFactory HttpClientFactory
+@using Applications.Web.Shared.Models
 
 <h3>Login</h3>
 
-<CascadingValue Name="UserId" Value="@UserId">
+<input type="text" @bind-value="LoginData.Login" />
+<input type="password" @bind-value="LoginData.Password" />
+<button @onclick="LoginButton">Login</button>
+
+<br />
+
+<span>@UserId</span>
+
+@* <span>@UserId</span>
+
+<br/>
+
+<button @onclick="@(async() => await LoginButton(0))">Load</button> *@
+
+@* @if (WeatherForecasts != null)
+{
+    @if (WeatherForecasts.Any())
+    {
+        @foreach (var item in WeatherForecasts)
+        {
+            <div>@item.Date - @item.TemperatureC - @item.Summary</div>
+        }
+    }
+    else
+    {
+        <span>Data is empty.</span>
+    }
+}
+else
+{
+    <span>Loading...</span>
+} *@
+
+@* <CascadingValue Name="UserId" Value="@UserId">
         <LoginForm SessionId="@CurrentGuid" OnSubmitButtonCallback="LoginButton"></LoginForm>
 </CascadingValue>
 
@@ -15,22 +50,42 @@
 
 <button @onclick="@(e => CurrentPage++)">++</button>
 <span>@CurrentPage</span>
-<button @onclick="@(e => CurrentPage--)">--</button>
+<button @onclick="@(e => CurrentPage--)">--</button> *@
 
 @code {
     public string UserId { get; set; } = "12345";
 
+    public WeatherForecast[] WeatherForecasts;
+
     public int CurrentPage { get; set; }
 
     public string CurrentGuid { get; set; }
+
+    public LoginRequest LoginData = new LoginRequest();
 
     public void GenerateGuid(int number)
     {
         CurrentGuid = Guid.NewGuid().ToString() + " " + number;
     }
 
-    public void LoginButton(int number)
+    public async Task LoginButton()
     {
-        UserId = number.ToString();
+        var client = HttpClientFactory.CreateClient();
+        // var result = await client.GetAsync("https://localhost:7193/api/weatherforecast/get");
+        // WeatherForecasts = await result.Content.ReadFromJsonAsync<WeatherForecast[]>();
+        var result = await client.PostAsJsonAsync("https://localhost:7193/api/account/login", LoginData);
+        if (result.IsSuccessStatusCode)
+        {
+            //успешный ответ с токеном
+            var token = await result.Content.ReadFromJsonAsync<LoginResponse>();
+            UserId = "OK " + token.Token;
+        }
+        else
+        {
+            //неуспешный с сообщением
+            var token = await result.Content.ReadFromJsonAsync<ErrorResponse>();
+            UserId = "NoOK " + token.Message;
+        }
+        //await result.Content.ReadFromJsonAsync<>();
     }
 }

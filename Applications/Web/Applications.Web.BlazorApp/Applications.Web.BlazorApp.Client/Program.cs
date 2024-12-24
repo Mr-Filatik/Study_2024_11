@@ -8,6 +8,12 @@ namespace Applications.Web.BlazorApp.Client
         {
             var builder = WebAssemblyHostBuilder.CreateDefault(args);
 
+            builder.Services.AddScoped(e =>
+                new HttpClient()
+                {
+                    BaseAddress = new Uri("https://localhost:7193/api/")
+                });
+
             await builder.Build().RunAsync();
         }
     }

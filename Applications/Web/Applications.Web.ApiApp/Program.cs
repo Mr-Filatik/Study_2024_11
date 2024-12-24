@@ -16,6 +16,16 @@ namespace Applications.Web.ApiApp
 
             // Add services to the container.
 
+            builder.Services.AddCors(options =>
+            {
+                options.AddDefaultPolicy(builder =>
+                {
+                    builder.WithOrigins("https://localhost:7086")
+                           .AllowAnyMethod()
+                           .AllowAnyHeader();
+                });
+            });
+
             builder.Services.AddMainDatabase();
 
             builder.Services
@@ -75,6 +85,8 @@ namespace Applications.Web.ApiApp
             builder.Services.AddSwaggerExamplesFromAssemblyOf<Program>();
 
             var app = builder.Build();
+
+            app.UseCors();
 
             // Configure the HTTP request pipeline.
 
