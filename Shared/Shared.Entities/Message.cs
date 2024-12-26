@@ -6,7 +6,7 @@ namespace Study_2024_11.Shared.Entities;
 //[Table("main_messages")]
 public class Message
 {
-    //[Key]
+    [Key]
     public int UniqId { get; set; }
     public string Title { get; set; }
 

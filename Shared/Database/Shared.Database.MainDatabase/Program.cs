@@ -14,9 +14,9 @@ namespace Shared.Database.MainDatabase
 
             var repo = new UserRepository(dbContext);
 
-            Console.WriteLine(repo.VerifyPassword(2, "gchdvjh"));
-            Console.WriteLine(repo.VerifyPassword(2, "gccskbhjbcsl"));
-            Console.WriteLine(repo.VerifyPassword(2, "password"));
+            //Console.WriteLine(repo.VerifyPassword(2, "gchdvjh"));
+            //Console.WriteLine(repo.VerifyPassword(2, "gccskbhjbcsl"));
+            //Console.WriteLine(repo.VerifyPassword(2, "password"));
 
             //repo.GetRangeByIds([1, 2, 3], 10);
             //var b = repo.Update(new Message()
@@ -38,11 +38,11 @@ namespace Shared.Database.MainDatabase
 
             //Console.WriteLine($"====================================");
 
-            ////users = dbContext.Users.Where(u => u.Age < 25);
-            //foreach (var u in users)
-            //{
-            //    Console.WriteLine($"User found. Id: {u.Id}, Name: {u.FirstName}.");
-            //}
+            var users = dbContext.Users.Where(u => u.Age > 25);
+            foreach (var u in users)
+            {
+                Console.WriteLine($"User found. Id: {u.Id}, Name: {u.FirstName}.");
+            }
         }
     }
 }
