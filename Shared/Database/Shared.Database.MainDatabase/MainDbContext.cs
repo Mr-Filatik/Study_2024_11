@@ -22,7 +22,9 @@ public class MainDbContext : DbContext
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         //optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=main_db;Username=main_user;Password=main_password");
-        optionsBuilder.UseSqlite("Data Source=C:\\Users\\Filatik\\test_db_study_2024_11.db");
+        //optionsBuilder.UseSqlite("Data Source=C:\\Users\\Filatik\\test_db_study_2024_11.db");
+        //optionsBuilder.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=StudyDatabase;Trusted_Connection=True;");
+        optionsBuilder.UseSqlServer("workstation id=StudyDatabase.mssql.somee.com;packet size=4096;user id=Filatik_SQLLogin_3;pwd=Filatik_SQLLogin_3;data source=StudyDatabase.mssql.somee.com;persist security info=False;initial catalog=StudyDatabase;TrustServerCertificate=True");
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
