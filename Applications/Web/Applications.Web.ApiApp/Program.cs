@@ -20,7 +20,7 @@ namespace Applications.Web.ApiApp
             {
                 options.AddDefaultPolicy(builder =>
                 {
-                    builder.WithOrigins("https://localhost:7086")
+                    builder.AllowAnyOrigin()
                            .AllowAnyMethod()
                            .AllowAnyHeader();
                 });
