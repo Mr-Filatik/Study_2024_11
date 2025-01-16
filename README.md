@@ -28,7 +28,7 @@
 16. Blazor веб-приложение. Формы и запрос данных с сервера. [Видео](https://disk.yandex.ru/d/PcaSsiX4bHZ3kg). Ссылки на почитать: [компонент EditForm](https://metanit.com/sharp/blazor/4.2.php), [HttpClient в Server проекте](https://metanit.com/sharp/blazor/6.3.php), [HttpClient в WASM проекте](https://metanit.com/sharp/blazor/6.1.php) и дополнительно: BaseAddress указывается с слешем в конце адреса, а путь при запросе без слеша в начале ([ссылка с ответом](https://stackoverflow.com/a/23438417)) и для вызова проверки использовать обработчик OnValidSubmit вместо OnSubmit, т.к. второй не вызывает проверку формы [ссылка с ответом](https://learn.microsoft.com/ru-ru/aspnet/core/blazor/forms/?view=aspnetcore-9.0#handle-form-submission).
 17. Хостинг приложений на Somee.com. [Видео](https://disk.yandex.ru/d/6itYJx3Rt2-c6A). [Презентация](https://disk.yandex.ru/d/6itYJx3Rt2-c6A). Дополнительно для API необходимо настроить CORS политику.
 18. Брокеры сообщений. Kafka. [Видео](https://disk.yandex.ru/d/MVDnHUlDEX_s8w). [Презентация](https://disk.yandex.ru/d/MVDnHUlDEX_s8w).
-19. Кеш приложения. Redis.
+19. Кеш приложения. Redis. [Видео](https://disk.yandex.ru/d/b8jxLqulnGbguQ). [Презентация](https://disk.yandex.ru/d/b8jxLqulnGbguQ).
 20. Виды баз данных.
 21. ...
 
