@@ -8,6 +8,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Text;
 using System.Security.Claims;
 using Applications.Web.Shared.Models;
+using Shared.Cache.Redis;
 
 namespace Applications.Web.ApiApp.Controllers
 {
@@ -18,11 +19,13 @@ namespace Applications.Web.ApiApp.Controllers
     {
         private readonly UserRepository _userRepository;
         private readonly IConfiguration _configuration;
+        private readonly ICacher _cacher;
 
-        public AccountController(UserRepository userRepository, IConfiguration config)
+        public AccountController(UserRepository userRepository, IConfiguration config, ICacher cacher)
         {
             _userRepository = userRepository;
             _configuration = config;
+            _cacher = cacher;
         }
 
         [AllowAnonymous]
@@ -73,6 +76,26 @@ namespace Applications.Web.ApiApp.Controllers
         public string GetSecondName()
         {
             return "BBB";
+        }
+
+        [HttpGet]
+        [AllowAnonymous]
+        [Route("set-value/{key}/{value}")]
+        public string SetValue(string key, string value)
+        {
+            //_cacher.SetString(key, value, CacheType.Users);
+            _cacher.PubString("channel-1", value);
+            return "OK";
+        }
+
+        [HttpGet]
+        [AllowAnonymous]
+        [Route("get-value/{key}")]
+        public string GetValue(string key)
+        {
+            //return _cacher.GetString(key, CacheType.Users);
+            _cacher.SubString("channel-1");
+            return "OK";
         }
 
         private string GenerateToken(string userId)
