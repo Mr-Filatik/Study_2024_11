@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Microsoft.AspNetCore.Authorization;
+using Shared.Cache.Redis.Configuration;
 
 namespace Applications.Web.ApiApp
 {
@@ -81,6 +82,8 @@ namespace Applications.Web.ApiApp
                 });
                 options.ExampleFilters();
             });
+
+            builder.Services.AddRedisCache();
 
             builder.Services.AddSwaggerExamplesFromAssemblyOf<Program>();
 

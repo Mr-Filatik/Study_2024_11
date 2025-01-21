@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
@@ -13,6 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Shared\Cache\Shared.Cache.Redis\Shared.Cache.Redis.csproj" />
     <ProjectReference Include="..\..\..\Shared\Database\Shared.Database.MainDatabase\Shared.Database.MainDatabase.csproj" />
     <ProjectReference Include="..\Application.Web.Shared\Application.Web.Shared.csproj" />
   </ItemGroup>
