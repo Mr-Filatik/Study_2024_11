@@ -29,7 +29,7 @@
 17. Хостинг приложений на Somee.com. [Видео](https://disk.yandex.ru/d/6itYJx3Rt2-c6A). [Презентация](https://disk.yandex.ru/d/6itYJx3Rt2-c6A). Дополнительно для API необходимо настроить CORS политику.
 18. Брокеры сообщений. Kafka. [Видео](https://disk.yandex.ru/d/MVDnHUlDEX_s8w). [Презентация](https://disk.yandex.ru/d/MVDnHUlDEX_s8w).
 19. Кеш приложения. Redis. [Видео](https://disk.yandex.ru/d/b8jxLqulnGbguQ). [Презентация](https://disk.yandex.ru/d/b8jxLqulnGbguQ).
-20. Виды баз данных.
+20. Базы данных. Колоночные. ClickHouse. [Видео](https://disk.yandex.ru/d/EWh-6Z_1wspByQ). [Презентация](https://disk.yandex.ru/d/EWh-6Z_1wspByQ).
 21. ...
 
 # ССЫЛКИ
