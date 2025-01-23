@@ -30,7 +30,7 @@
 18. Брокеры сообщений. Kafka. [Видео](https://disk.yandex.ru/d/MVDnHUlDEX_s8w). [Презентация](https://disk.yandex.ru/d/MVDnHUlDEX_s8w).
 19. Кеш приложения. Redis. [Видео](https://disk.yandex.ru/d/b8jxLqulnGbguQ). [Презентация](https://disk.yandex.ru/d/b8jxLqulnGbguQ).
 20. Базы данных. Колоночные. ClickHouse. [Видео](https://disk.yandex.ru/d/EWh-6Z_1wspByQ). [Презентация](https://disk.yandex.ru/d/EWh-6Z_1wspByQ).
-21. ...
+21. Docker и .NET. [Видео](https://disk.yandex.ru/d/uOey07X_ApwBDg). [Презентация](https://disk.yandex.ru/d/uOey07X_ApwBDg).
 
 # ССЫЛКИ
 
