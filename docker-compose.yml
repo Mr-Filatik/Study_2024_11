@@ -1,0 +1,37 @@
+name: my-app
+
+services:
+  redis-server:
+    image: redis:latest
+    restart: always
+    ports:
+      - 6379:6379
+    environment:
+      ALLOW_EMPTY_PASSWROD: yes
+      REDIS_REPLICATION_MODE: master
+      REDIS_PASSWORD: secret
+    volumes:
+      - ./volumes/redis/:/var/lib/redis/data/
+    networks:
+      - my-app-network
+
+  backend-server:
+    container_name: backend-server
+    depends_on:
+      - redis-server
+    ports:
+      - 8080:8080
+    restart: always
+    build:
+      context: .
+      dockerfile: Applications/Web/Applications.Web.ApiApp/Dockerfile
+    environment:
+      - JwtSettings__Issuer=localhost
+      - JwtSettings__Audience=localhost
+      - JwtSettings__SecretKey=dcjhbsdlvsudybIUBCDUI78ecy9cbliiYCCBDDLKdscbldbovndlvduVHDdoijvvndkjdluiHVDUb
+    networks:
+      - my-app-network
+
+networks:
+  my-app-network:
+    driver: bridge
