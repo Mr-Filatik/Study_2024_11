@@ -83,8 +83,8 @@ namespace Applications.Web.ApiApp.Controllers
         [Route("set-value/{key}/{value}")]
         public string SetValue(string key, string value)
         {
-            //_cacher.SetString(key, value, CacheType.Users);
-            _cacher.PubString("channel-1", value);
+            _cacher.SetString(key, value, CacheType.Users);
+            //_cacher.PubString("channel-1", value);
             return "OK";
         }
 
@@ -93,8 +93,8 @@ namespace Applications.Web.ApiApp.Controllers
         [Route("get-value/{key}")]
         public string GetValue(string key)
         {
-            //return _cacher.GetString(key, CacheType.Users);
-            _cacher.SubString("channel-1");
+            return _cacher.GetString(key, CacheType.Users);
+            //_cacher.SubString("channel-1");
             return "OK";
         }
 

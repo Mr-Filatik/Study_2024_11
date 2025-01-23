@@ -9,8 +9,8 @@ namespace Shared.Cache.Redis.Configuration
         {
             var redOpt = new ConfigurationOptions()
             {
-                EndPoints = { "localhost:6379" },
-                //AbortOnConnectFail = false,
+                EndPoints = { "redis-server:6379" },
+                AbortOnConnectFail = false,
             };
 
             var mp = ConnectionMultiplexer.Connect(redOpt);
